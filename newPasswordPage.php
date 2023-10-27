@@ -19,6 +19,8 @@ include __DIR__ . '/partials/head.php';
                     <h3><?php echo $password ?></h3>
                 </div>
 
+                <a href="index.php" class="btn btn-warning">Genera un altra password</a>
+
             </main>
 
         </div>
