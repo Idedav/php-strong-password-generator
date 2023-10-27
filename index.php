@@ -1,10 +1,20 @@
 <?php  
 
 $message = 'Scegliere una password con un minimo di 8 caratteri e un massimo di 32 caratteri';
-
+$new_password = [];
 if(isset($_GET['password-lenght'])){
-    if($_GET['password-lenght'] < 7 || $_GET['password-lenght'] > 32){
+    $password_length = $_GET['password-lenght'];
+    if($password_length < 8 || $password_length > 32){
         $message = 'Errore! La lunghezza della password deve avere un minimo di 8 caratteri e un massimo di 32 caratteri';
+    }else{
+        $characters = 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789@#_?!$£%&ç§';
+        for ($i = 0; $i < $password_length; $i++){
+            $n = rand(0, strlen($characters) - 1);
+            $new_password[$i] = $characters[$n];
+        }
+        session_start();
+        $_SESSION['password'] = $new_password;
+        header('Loaction: ./newPasswordPage.php');
     }
 }
 
