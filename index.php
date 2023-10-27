@@ -14,7 +14,7 @@ if(isset($_GET['password-lenght'])){
         }
         session_start();
         $_SESSION['password'] = $new_password;
-        header('Loaction: ./newPasswordPage.php');
+        header('Location: ./newPasswordPage.php');
     }
 }
 
@@ -32,7 +32,7 @@ include __DIR__ . '/partials/head.php';
 
             <h2>Genera una password sicura</h2>
 
-            <div class="container-password">
+            <div class="container-password d-flex align-items-center">
                 <p><?php echo $message ?></p>
             </div>
 

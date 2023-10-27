@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$password = $_SESSION['password'];
 include __DIR__ . '/partials/head.php';
 ?>
 
@@ -12,8 +13,8 @@ include __DIR__ . '/partials/head.php';
 
                 <h2>La password generata è:</h2>
 
-                <div class="container-password">
-                    <p><?php echo $message ?></p>
+                <div class="container-password d-flex align-items-center justify-content-center">
+                    <h3><?php echo implode($password) ?></h3>
                 </div>
 
             </main>
