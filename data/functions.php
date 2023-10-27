@@ -15,13 +15,13 @@
                 $n = rand(0, strlen($characters[$npos]) - 1);
                 $new_password .= $characters[$npos][$n];
             }
-        }while( similar_text($new_password , $characters[0]) > 0 
+        }while( similar_text($new_password , $characters[0]) 
                 && 
-                similar_text($new_password , $characters[1]) > 0 
+                similar_text($new_password , $characters[1]) 
                 && 
-                similar_text($new_password , $characters[2]) > 0 
+                similar_text($new_password , $characters[2]) 
                 && 
-                similar_text($new_password , $characters[3]) > 0);
+                similar_text($new_password , $characters[3]));
 
         return $new_password;
     }
