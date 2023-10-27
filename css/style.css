@@ -1,0 +1,49 @@
+body{
+    background-color: #001632;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+header{
+    color: #808B99;
+}
+
+.container-password{
+    background-color: #CFF3FC;
+    color: black;
+    width: 70%;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.container-password p{
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.form-container{
+    background-color: white;
+    width: 70%;
+    border-radius: 5px;
+    color: black;
+}
+
+.form-container form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.buttons-container{
+    text-align: start;
+}
